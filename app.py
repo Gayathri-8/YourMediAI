@@ -31,7 +31,7 @@ def save_uploaded_file(uploaded_file):
         return None
     return None
 def main():
-    st.title("Your MedAI")
+    st.title("Your MediAI")
     initialize_chatbot()
     with st.sidebar:
         st.header("Upload Files")
@@ -75,7 +75,6 @@ def main():
             st.markdown(message["content"])
 
     if prompt := st.chat_input("Ask your question..."):
-        # Add user message to chat history
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
